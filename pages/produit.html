@@ -1,0 +1,135 @@
+<!DOCTYPE html>	
+<html>
+	<link rel="stylesheet" href="../assets/css/notif.css" type="text/css">
+	<head>
+		<title>Super store!/Notif1</title>
+		<meta charset="UTF-8" />
+	</head>
+
+	<div id="entete">
+
+		<div class="logo">
+			<a href="../index.html" style="text-decoration: none;">
+				<img src="../assets/img/logo.jpg" height="30" width="30">
+			</a>
+
+			<a href="../index.html">
+				<h1 style="display: inline-block;">Super store !</h1>
+			</a>
+		</div>
+		
+		<div class="scroll-box">
+			<ul>
+				<li><a href="notif1.html">Première notification</a></li>
+				<li><a href="notif2.html">Deuxième notification</a></li>
+				<li><a href="notif3.html">Troisième notification</a></li>
+			</ul>
+		</div>
+
+		<div class="search">      
+			<label for="nom1"></label>
+			<input type="text1" id="nom1"/>
+			<select id="liste1">
+				<option value=""></option>
+				<option value="Snowboard">Snowboard</option>
+				<option value="Boot">Boot</option>
+				<option value="Fixation">Fixation</option>
+			</select>
+			<label for="rechercher1"></label>
+			<button id="rechercher1">Rechercher</button>
+		</div>
+
+		<div id="contenu">
+			<p style="color: black; text-align: center;" class="menu_head" class="menu_head">MENU</p>
+			<ul class="menu_body">
+				<li><a style="display: inline-block;" href="../index.html"> Accueil </a></li>
+				<li><a style="display: inline-block;" href="presentation.html"> Présentation </a></li>
+				<li><a style="display: inline-block; " href="produits.html"> Nos produits </a></li>
+				<li><a style="display: inline-block; " href="plan-acces.html"> Plan d'accès </a></li>
+				<li><a style="display: inline-block; " href="contact.html"> Contact </a></li>
+				<li><a style="display: inline-block; " href="compte.html"> Compte </a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<body>
+		<hr />
+		<div id=menu>
+			<a style="display: inline-block;" href="../index.html"> Accueil </a>
+			<a style="display: inline-block;" href="presentation.html"> Présentation </a>
+			<a style="display: inline-block; " href="produits.html"> Nos produits </a>
+			<a style="display: inline-block; " href="plan-acces.html"> Plan d'accès </a>
+			<a style="display: inline-block; " href="contact.html"> Contact </a>
+			<a style="display: inline-block; " href="compte.html"> Compte </a>
+		</div>
+        </br></br></br></br></br></br>
+        <p class="noti"> Stock épuisé</p>
+
+		<div class="footer" style="position: fixed;">
+			<a style="display: inline-block;" href=""> CONTACT </a>
+			<a style="display: inline-block; " href=""> SERVICES </a>
+			<a style="display: inline-block; " href=""> COOKIES </a>
+			<a style="display: inline-block; " href=""> RESEAUX SOCIAUX </a>
+		</div>
+
+		<script src="../jquery.js"></script>
+		<script src="../functions.js"></script>
+		<script>
+			//fonction RECERCHER
+function afficher1(){
+	//mettre l'élément choisi dans input
+	$("#nom1").val($("#liste1 option:selected").text());
+}
+$("#liste1").on("change",afficher1);
+
+
+function chercher1(){
+	var name = $("#nom1").val();
+	if(name=="Snowboard"||name=="snowboard"){
+		//ouvrir un nouvel onglet
+		nwin = window.open(''); 
+		//modifier le
+		nwin.document.write("<div class='logo'><a href='../index.html' style='text-decoration: none;'><img src='../assets/img/logo.jpg' height='30' width='30'></a><a href='../index.html'><h1 style='display: inline-block;'>Super store !</h1></a></div>");  
+		nwin.document.write("</br></br></br>");
+		nwin.document.write("<h1>Résultats trouvés</h1>");
+		nwin.document.write("<img src='../assets/img/produits/produit1.jpg' height='400px',length='300px'>"); 
+		nwin.document.write("<img src='../assets/img/produits/produit4.jpg' height='400px',length='300px'>"); 
+		nwin.focus(); 
+		//titre de la page
+		nwin.document.title="Snowboard"; 
+	}
+	else if(name=="Boot"||name=="boot"){
+		nwin = window.open(''); 
+		nwin.document.write("<div class='logo'><a href='../index.html' style='text-decoration: none;'><img src='../assets/img/logo.jpg' height='30' width='30'></a><a href='../index.html'><h1 style='display: inline-block;'>Super store !</h1></a></div>");  
+		nwin.document.write("</br></br></br>");
+		nwin.document.write("<h1>Résultats trouvés</h1>");
+		nwin.document.write("<img src='../assets/img/produits/produit2.jpg' height='400px',length='300px'>"); 
+		nwin.document.write("<img src='../assets/img/produits/produit5.jpg' height='400px',length='300px'>");  
+		nwin.focus(); 
+		nwin.document.title="Boot"; 
+	}
+	else if(name=="Fixation"||name=="fixation"){
+		nwin = window.open(''); 
+		nwin.document.write("<div class='logo'><a href='../index.html' style='text-decoration: none;'><img src='../assets/img/logo.jpg' height='30' width='30'></a><a href='../index.html'><h1 style='display: inline-block;'>Super store !</h1></a></div>"); 
+		nwin.document.write("</br></br></br>");
+		nwin.document.write("<h1>Résultats trouvés</h1>");
+		nwin.document.write("<img src='../assets/img/produits/produit3.jpg' height='400px',length='300px'>"); 
+		nwin.document.write("<img src='../assets/img/produits/produit6.jpg' height='400px',length='300px'>"); 
+		nwin.focus(); 
+		nwin.document.title="Fixation"; 
+	}
+	else{
+		nwin = window.open(''); 
+		nwin.document.write("<div class='logo'><a href='../index.html' style='text-decoration: none;'><img src='../assets/img/logo.jpg' height='30' width='30'></a><a href='../index.html'><h1 style='display: inline-block;'>Super store !</h1></a></div>"); 
+		nwin.document.write("</br></br></br>");
+		nwin.document.write("<h1>Aucun produit trouvé</h1>");
+		nwin.focus(); 
+		nwin.document.title="Aucun";
+	}
+}
+$("#rechercher1").on("click",chercher1);
+		</script>
+	</body>
+
+</html>
